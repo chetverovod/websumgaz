@@ -15,7 +15,7 @@ def load_model():
     return  AutoModelForCausalLM.from_pretrained(model_name), tokenizer
 
 def load_txt():
-    uploaded_file = st.file_uploader(label='Выберите текст для распознавания')
+    uploaded_file = st.file_uploader(label='**Выберите текст для распознавания:**')
     if uploaded_file is not None:
         # To convert to a string based IO:
         stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
